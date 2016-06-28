@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app="ToDo">
+   
+    <head>
+       
+        <meta charset="UTF-8">
+        <title>ToDo</title>
+        <link type="text/css" rel="stylesheet" href="css/styles.css">
+        <script src="js/angular.min.js"></script>
+        <script src="js/todo.js"></script>
+        
+    </head>
+    
+    <body>
+       
+        <div ng-controller="todoController" id="todoapp">
+            
+            <form id="todo-form" ng-submit="addToDo()">
+                <input type="text" id="new-todo" placeholder="Enter Todo List" ng-model="newToDo" autofocus/>
+            </form>
+            
+            <section id="main">
+                <ul id="todo-list">
+                    <li ng-repeat="todo in todos" class="list-todo">
+                        <input type="checkbox" ng-model="todo.done">
+                        <span ng-class="{'done':todo.done}" class="title-todo">{{todo.title}}</span>
+                        <button id="destroy" ng-click="clear(todo)"><img class="delicon" src="img/delete.png"></button>
+                    </li>
+                </ul>
+            </section>
+            
+            <footer ng-show="todos.length">
+               <div class="selectall"><input id="toggle-all" type="checkbox" ng-model="allChecked" ng-click="markAll()"><span class="select">Select All</span></div>
+                <button id="clearcomp" ng-click="clearCompleted()"><img class="delicon" src="img/delete.png"> Clear Completed</button>
+            </footer>
+            
+        </div>
+        
+    </body>
+    
+</html>

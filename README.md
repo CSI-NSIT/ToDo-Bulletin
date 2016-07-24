@@ -1,10 +1,10 @@
-# ToDo-App
-A Minimal To-Do Application, built using AngularJS. Made for the purpose of learning. :)
+# ToDo-Bulletin Board
+A To-do bulletin board, which helps in organizing pending tasks of the society. Built using AngularJS.
 
 ## Instructions to Run
 + Clone Repository to local machine
 ```git
-git clone https://github.com/sarthakagarwal18/ToDo-App.git
+https://github.com/CSI-NSIT/ToDo-App.git
 ```
 + Open [index.html](index.html)
 
